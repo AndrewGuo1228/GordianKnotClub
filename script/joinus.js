@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     if (joinUsButton) {
       joinUsButton.addEventListener('click', function() {
-        window.location.href = 'mailto:gordianknot.capital03@gmail.com?subject=Join%20Gordian%20Knot%20Capital';
+        window.location.href = 'mailto:yanhaoguo1228@gmail.com?subject=Join%20Gordian%20Knot%20Capital';
       });
     } else {
       console.error("Join us button not found.");
