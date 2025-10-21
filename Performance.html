@@ -30,8 +30,28 @@
                 <div class="flex-desc" id="ikumb3">After 17 months of behind-the-scenes work, we launched our strategy publicly nine months ago. Since then, we have grown our investor base from just 2 to 12, achieving consistent monthly profits and distributing dividends exceeding 29%. Our assets under management have surged from $49,470 in October 2023 to $155,061 by June 2024—a remarkable 200%+ increase in just 9 months.
                     As we look to the future, our commitment to learning and refining our strategies remains steadfast. We aim to incorporate more precise tactics and offer additional indicators that our investors value, ensuring that we continue to provide exceptional asset management services.
                 </div>
-                <div class="chart-container" id="chart-container" style="width: 100%; height: 400px;">
-                    <canvas id="performanceChart"></canvas>
+
+                <!-- Chart Tabs -->
+                <div class="chart-tabs">
+                  <div class="chart-tab active" data-chart="totalFunds">Total Funds Over Time</div>
+                  <div class="chart-tab" data-chart="profitYield">Profit Yield Over Time</div>
+                </div>
+
+                <!-- Chart Content Areas -->
+                <div id="totalFundsChart" class="chart-content active">
+                  <div class="chart-wrapper">
+                    <div class="chart-container">
+                      <canvas id="totalFundsCanvas"></canvas>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="profitYieldChart" class="chart-content">
+                  <div class="chart-wrapper">
+                    <div class="chart-container">
+                      <canvas id="profitYieldCanvas"></canvas>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -86,6 +106,6 @@
               </div>
             </footer>
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script src="script/script.js"></script>
+            <script src="script/performance-charts.js"></script>
           </body>
         </html>
