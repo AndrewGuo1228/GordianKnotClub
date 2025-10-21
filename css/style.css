@@ -73,31 +73,63 @@
     max-width:1150px;
     margin:0 auto;
   }
+
+  /* Header Navigation */
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+  }
+
   .logo-container{
-    float:left;
-    width:50%;
+    display: flex;
+    align-items: center;
   }
+
   .logo{
-    background-color:#fff;
-    border-radius:5px;
-    width:130px;
-    padding:10px;
-    min-height:30px;
-    text-align:center;
-    line-height:30px;
-    color:#4d114f;
-    font-size:23px;
+    background: linear-gradient(135deg, var(--accent-teal) 0%, var(--accent-teal-dark) 100%);
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    color: var(--bg-dark-primary);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(45, 212, 191, 0.3);
   }
+
+  .logo:hover {
+    background: linear-gradient(135deg, var(--accent-teal-light) 0%, var(--accent-teal) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 212, 191, 0.5);
+  }
+
+  .logo-link {
+    text-decoration: none;
+  }
+
   .menu{
-    float:right;
-    width:50%;
+    display: flex;
+    gap: 12px;
+    align-items: center;
   }
+
+  .menu-item-link {
+    text-decoration: none;
+  }
+
   .menu-item{
-    float:right;
     font-size:15px;
     color: var(--text-secondary);
-    width:130px;
-    padding:10px;
+    padding:10px 20px;
     min-height:50px;
     text-align:center;
     line-height:30px;
@@ -402,9 +434,8 @@
   }
   .footer-under{
     background: var(--bg-dark-secondary);
-    padding-bottom:100px;
-    padding-top:100px;
-    min-height:500px;
+    padding-bottom:80px;
+    padding-top:80px;
     color: var(--text-secondary);
     position:relative;
     font-weight:400;
@@ -412,13 +443,13 @@
     border-top: 1px solid var(--border-dark);
   }
   .copyright{
-    background-color:rgba(0, 0, 0, 0.15);
-    color:rgba(238, 238, 238, 0.5);
-    bottom:0;
-    padding:1em 0;
-    position:absolute;
+    background-color:rgba(0, 0, 0, 0.2);
+    color: var(--text-tertiary);
+    padding:1.5em 0;
+    margin-top: 60px;
     width:100%;
-    font-size:0.75em;
+    font-size:0.85em;
+    border-top: 1px solid var(--border-dark);
   }
   .made-with{
     float:left;
@@ -426,11 +457,77 @@
     padding:5px 0;
   }
   .foot-social-btns{
-    display:none;
-    float:right;
-    width:50%;
-    text-align:right;
+    display:flex;
+    justify-content: center;
+    gap: 20px;
     padding:5px 0;
+  }
+
+  .social-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+
+  .social-link:hover {
+    color: var(--accent-teal);
+    background-color: rgba(45, 212, 191, 0.1);
+  }
+
+  .footer-brand {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-brand-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+  }
+
+  .footer-brand-tagline {
+    color: var(--text-secondary);
+    font-size: 0.95em;
+    font-style: italic;
+  }
+
+  .footer-info {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-dark);
+  }
+
+  .footer-info-item {
+    display: inline-block;
+    margin: 0 15px;
+    color: var(--text-tertiary);
+    font-size: 0.9em;
+  }
+
+  .footer-info-item strong {
+    color: var(--accent-teal);
+    font-weight: 600;
+  }
+
+  .copyright-text {
+    text-align: center;
+    color: var(--text-tertiary);
+  }
+
+  .copyright-text a {
+    color: var(--accent-teal);
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .copyright-text a:hover {
+    color: var(--accent-teal-light);
   }
   .footer-container{
     display:flex;
