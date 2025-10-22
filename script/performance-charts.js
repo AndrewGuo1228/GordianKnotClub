@@ -4,19 +4,20 @@ const performanceData = {
     '10/2023', '11/2023', '12/2023', '1/2024', '2/2024', '3/2024',
     '4/2024', '5/2024', '6/2024', '7/2024', '8/2024', '9/2024',
     '10/2024', '11/2024', '1/2025', '12+/2024', '5/2025', '5/2025 (2nd)',
-    '5/2025 (3rd)', '6/2025', '7/2025', '8/2025'
+    '5/2025 (3rd)', '6/2025', '7/2025', '8/2025','9/2025'
   ],
   totalFunds: [
     49470, 61470, 70170, 74997, 90861, 105970,
     116170, 125456.32, 129914, 154176, 170187.15, 200170.15,
     216095.15, 237148.15, 260548.15, 261148.15, 288725.57,
-    288725.57, 288725.57, 318343.67, 318206.31, 354640.81
+    288725.57, 288725.57, 318343.67, 318206.31, 354640.81,
+    371231.31
   ],
   profitYield: [
-    0.68, 5.14, 4.08, 4.52, 4.39, 2.83,
-    3.62, 5.16, 4.31, 6.16, 1.14, 1.86,
-    1.57, 1.75, 1.75, 0.87, 1.25, 1.14,
-    1.75, 1.11, 0.38, 1.97
+    5.02,	4.08,	3.95,	4.52,	4.12, 4.04,
+    5.16,	3.99,	6.16,	1.66,	2.30,	2.57,
+    2.46,	1.67,	1.25,	1.63,	2.50,	1.11,
+    1.97, 1.69, 1.45, 1.43, 1.39
   ]
 };
 
@@ -208,7 +209,7 @@ const profitYieldChart = new Chart(profitYieldCtx, {
   data: {
     labels: performanceData.labels,
     datasets: [{
-      label: 'Profit Yield (%)',
+      label: 'Dividend Yield (%)',
       data: performanceData.profitYield,
       borderColor: '#5eead4',
       backgroundColor: createProfitYieldGradient(profitYieldCtx),
@@ -234,7 +235,7 @@ const profitYieldChart = new Chart(profitYieldCtx, {
         callbacks: {
           ...chartConfig.options.plugins.tooltip.callbacks,
           label: function(context) {
-            return 'Profit Yield: ' + context.parsed.y.toFixed(2) + '%';
+            return 'Dividend Yield: ' + context.parsed.y.toFixed(2) + '%';
           }
         }
       }
@@ -245,7 +246,7 @@ const profitYieldChart = new Chart(profitYieldCtx, {
         ...chartConfig.options.scales.y,
         title: {
           display: true,
-          text: 'Profit Yield (%)',
+          text: 'Dividend Yield (%)',
           font: {
             size: 13,
             family: "'Inter', sans-serif",
@@ -289,7 +290,7 @@ tabs.forEach(tab => {
       setTimeout(() => {
         if (chartType === 'totalFunds') {
           totalFundsChart.resize();
-        } else if (chartType === 'profitYield') {
+        } else if (chartType === 'DividendYield') {
           profitYieldChart.resize();
         }
       }, 100);
