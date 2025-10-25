@@ -1,6 +1,6 @@
 # GordianKnotClub Website
 
-Student-run hedge fund website with dark theme and interactive performance charts.
+A mini-hedge fund website with dark theme and interactive performance charts (UC San Diego -> Cornell).
 
 ## Features
 
@@ -53,4 +53,4 @@ Dark theme inspired by modern investment applications:
 
 ---
 
-Created with 💚 by UCSD Students
+Created with 💚 by UC SanDiego/Cornell Students
