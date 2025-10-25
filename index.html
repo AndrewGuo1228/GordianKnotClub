@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <canvas id="backgroundCanvas"></canvas>
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="script/subscribe.js"></script>
   <script src="script/jointeam.js"></script>
@@ -12,14 +13,14 @@
     <div class="container-width" id="iq7f">
       <div class="header-nav">
         <a href="index.html" class="logo-link">
-          <div class="logo">GKC</div>
+          <div class="logo fade-in">GKC</div>
         </a>
         <nav class="menu" id="icuu">
           <a href="Team.html" class="menu-item-link">
-            <div class="menu-item">Team</div>
+            <div class="menu-item fade-in">Team</div>
           </a>
           <a href="Performance.html" class="menu-item-link">
-            <div class="menu-item">Performance</div>
+            <div class="menu-item fade-in">Performance</div>
           </a>
           <!-- <a href="strategy.html" class="menu-item-link">
             <div class="menu-item">Strategies</div>
@@ -29,20 +30,20 @@
           </a> -->
         </nav>
       </div>
-      <div class="lead-title" id="i3nxp">Gordian Knot Capital</div>
-      <div class="sub-lead-title" id="ieg23">Embrace time's grace, navigate ambiguity's trace</div>
+      <div class="lead-title fade-in" id="i3nxp">Gordian Knot Capital</div>
+      <div class="sub-lead-title fade-in" id="ieg23">Embrace time's grace, navigate ambiguity's trace</div>
       <button class="lead-btn" id="ij832">Join the team</button> <!-- Changed to a button -->
     </div>
   </header>
   <section class="flex-sect" id="iviol">
     <div class="container-width" id="iym6y">
-      <div class="flex-title" id="iu88h">About us</div>
-      <div class="flex-desc" id="ibvfj">
+      <div class="flex-title fade-in" id="iu88h">About us</div>
+      <div class="flex-desc fade-in" id="ibvfj">
         We manage a single, diversified portfolio across equities, bonds, commodities, and crypto, with the aim to build
         a low beta portfolio, that could harvest volatility and time value via option strategy.
       </div>
       <div class="cards" id="ikkl5">
-        <div class="card" id="ivank">
+        <div class="card fade-in" id="ivank">
           <div class="card-body" id="i2ufz">
             <div class="card-title" id="i9e5f">Portfolio Investment</div>
             <div class="card-sub-title" id="ija8z"> Asset allocation, Option, Valuation</div>
@@ -51,7 +52,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card fade-in">
           <div class="card-body">
             <div class="card-title" id="ieyyr">Alternative Investment</div>
             <div class="card-sub-title">Cryptocurrency, Short-swing trade</div>
@@ -60,7 +61,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card fade-in">
           <div class="card-body" id="ifqbo">
             <div class="card-title" id="ilkqh">Risk Management</div>
             <div class="card-sub-title"> Greeks-based risk decomposition, Monte Carlo Simulation</div>
@@ -158,5 +159,6 @@
       </div>
     </div>
   </footer>
+<script src="script/montecarlo-background.js"></script>
 </body>
 </html>

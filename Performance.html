@@ -1,6 +1,7 @@
 <!doctype html>
         <html lang="en">
           <head>
+            <canvas id="backgroundCanvas"></canvas>
             <meta charset="utf-8">
             <link rel="stylesheet" href="./css/style.css">
           </head>
@@ -9,14 +10,14 @@
               <div class="container-width" id="iq7f">
                 <div class="header-nav">
                   <a href="index.html" class="logo-link">
-                    <div class="logo">GKCC</div>
+                    <div class="logo fade-in">GKCC</div>
                   </a>
                   <nav class="menu" id="icuu">
                     <a href="Team.html" class="menu-item-link">
-                      <div class="menu-item">Team</div>
+                      <div class="menu-item fade-in">Team</div>
                     </a>
                     <a href="Performance.html" class="menu-item-link">
-                      <div class="menu-item">Performance</div>
+                      <div class="menu-item fade-in">Performance</div>
                     </a>
                     <!-- <a href="strategy.html" class="menu-item-link">
                       <div class="menu-item">Strategies</div>
@@ -26,18 +27,18 @@
                     </a> -->
                   </nav>
                 </div>
-                <div class="lead-title" id="i3nxp">Our Historical Performance
+                <div class="lead-title fade-in" id="i3nxp">Our Historical Performance
                 </div>
-                <div class="sub-lead-title" id="ieg23">
+                <div class="sub-lead-title fade-in" id="ieg23">
                     It’s those small, boring decisions that really compound over time.
                 </div>
               </div>
             </header>
             <section class="flex-sect" id="i4wxnh">
               <div class="container-width" id="icrx1l">
-                <div class="flex-title" id="iill0k">Our Performance
+                <div class="flex-title fade-in" id="iill0k">Our Performance
                 </div>
-                <div class="flex-desc" id="ikumb3">After 17 months of behind-the-scenes work, we launched our strategy publicly by Oct 2023. Since then, we have grown our investor base from just 2 to 12, achieving consistent monthly profits and distributing dividends exceeding 90%. Our assets under management have surged from $49,470 in Oct 2023 to $371,231 by Oct 2023—a remarkable 700%+ scale up in 2 years.
+                <div class="flex-desc fade-in" id="ikumb3">After 17 months of behind-the-scenes work, we launched our strategy publicly by Oct 2023. Since then, we have grown our investor base from just 2 to 12, achieving consistent monthly profits and distributing dividends exceeding 90%. Our assets under management have surged from $49,470 in Oct 2023 to $371,231 by Oct 2023—a remarkable 700%+ scale up in 2 years.
                     As we look to the future, our commitment to learning and refining our strategies remains steadfast. We aim to incorporate more precise tactics and offer additional indicators that our investors value, ensuring that we continue to provide exceptional asset management services.
                 </div>
 
@@ -136,5 +137,6 @@
             </footer>
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <script src="script/performance-charts.js"></script>
+            <script src="script/montecarlo-background.js"></script>
           </body>
         </html>

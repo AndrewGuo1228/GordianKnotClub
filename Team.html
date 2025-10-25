@@ -1,6 +1,7 @@
 <!doctype html>
         <html lang="en">
           <head>
+            <canvas id="backgroundCanvas"></canvas>
             <meta charset="utf-8">
             <link rel="stylesheet" href="./css/style.css">
             <script src="script/joinus.js"></script>
@@ -10,14 +11,14 @@
               <div class="container-width" id="iq7f">
                 <div class="header-nav">
                   <a href="index.html" class="logo-link">
-                    <div class="logo">GKCC</div>
+                    <div class="logo fade-in">GKCC</div>
                   </a>
                   <nav class="menu" id="icuu">
                     <a href="Team.html" class="menu-item-link">
-                      <div class="menu-item">Team</div>
+                      <div class="menu-item fade-in">Team</div>
                     </a>
                     <a href="Performance.html" class="menu-item-link">
-                      <div class="menu-item">Performance</div>
+                      <div class="menu-item fade-in">Performance</div>
                     </a>
                     <!-- <a href="strategy.html" class="menu-item-link">
                       <div class="menu-item">Strategies</div>
@@ -27,22 +28,22 @@
                     </a> -->
                   </nav>
                 </div>
-                <div class="lead-title" id="i3nxp">Team members
+                <div class="lead-title fade-in" id="i3nxp">Team members
                 </div>
-                <div class="sub-lead-title" id="ieg23">Please state your intended department, explain why you think you would be a great fit, and kindly attach your resume </div>
-                <button class="lead-btn" id="ij832">Join us</button> <!-- Changed to a button -->
+                <div class="sub-lead-title fade-in" id="ieg23">Please state your intended department, explain why you think you would be a great fit, and kindly attach your resume </div>
+                <button class="lead-btn fade-in" id="ij832">Join us</button> <!-- Changed to a button -->
               </div>
             </header>
             <section class="bdg-sect" id="ihtldu">
               <div class="container-width">
-                <h1 class="bdg-title" id="i6x5iy">The team
+                <h1 class="bdg-title fade-in" id="i6x5iy">The team
                 </h1>
                 <div class="badges">
                   <div class="badge" id="ipeeff">
                     <div class="badge-header" id="ifsp1k">
                     </div>
                     <img src="assets/Wentao.png" class="badge-avatar" id="iu3qhc"/>
-                    <div class="badge-body">
+                    <div class="badge-body fade-in">
                       <div class="badge-name" id="i1ru01">Wentao Luo
                       </div>
                       <div class="badge-role" id="isf3fl">Co-funder, Alternative investment
@@ -60,7 +61,7 @@
                     <div class="badge-header">
                     </div>
                     <img src="assets/Guo.png" class="badge-avatar"/>
-                    <div class="badge-body">
+                    <div class="badge-body fade-in">
                       <div class="badge-name" id="ip8fly">Yanhao Guo
                       </div>
                       <div class="badge-role"> Co-funder, Investment, Risk
@@ -78,7 +79,7 @@
                     <div class="badge-header">
                     </div>
                     <img src="assets/Lucas.png" class="badge-avatar"/>
-                    <div class="badge-body">
+                    <div class="badge-body fade-in">
                       <div class="badge-name" id="ia2f6t">Lucas
                       </div>
                       <div class="badge-role">Co-funder, Operations
@@ -92,16 +93,16 @@
                     </div>
                   </div>
                 </div>
-                <h1 class="bdg-title" id="i6x5iy">Consultants
+                <h1 class="bdg-title fade-in" id="i6x5iy">Consultants
                 </h1>
-                <div class="flex-desc" id="i2">
+                <div class="flex-desc fade-in" id="i2">
                 Individuals who kindly share their valuable expertise with our club.
                 </div>
                 <div class="badge">
                     <div class="badge-header">
                     </div>
                     <img src="assets/Eric.png" class="badge-avatar"/>
-                    <div class="badge-body">
+                    <div class="badge-body fade-in">
                       <div class="badge-name" id="ip8fly">Eric Gu
                       </div>
                       <div class="badge-role"> He who generously helps with the club website development, specifically in setting up the login, registration, and user accounts.
@@ -184,5 +185,6 @@
                 </div>
               </div>
             </footer>
+          <script src="script/montecarlo-background.js"></script>
           </body>
         </html>

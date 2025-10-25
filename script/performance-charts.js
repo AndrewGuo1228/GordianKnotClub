@@ -159,20 +159,40 @@ const totalFundsChart = new Chart(totalFundsCtx, {
   },
   options: {
     ...chartConfig.options,
-    plugins: {
-      ...chartConfig.options.plugins,
-      tooltip: {
-        ...chartConfig.options.plugins.tooltip,
-        callbacks: {
-          ...chartConfig.options.plugins.tooltip.callbacks,
-          label: function(context) {
-            return 'Total Funds: $' + context.parsed.y.toLocaleString('en-US', {
-              minimumFractionDigits: 2,
-              maximumFractionDigits: 2
-            });
-          }
-        }
+
+    // === smooth animation ===
+    animation: {
+      duration: 1800,
+      easing: 'easeInOutQuart'
+    },
+    transitions: {
+      show: { animations: { x: { from: 0 }, y: { from: 0 } } },
+      hide: { animations: { x: { to: 0 }, y: { to: 0 } } }
+    },
+    animations: {
+      tension: {
+        duration: 1500,
+        easing: 'linear',
+        from: 0.3,
+        to: 0.4,
+        loop: false
+      },
+      borderWidth: {
+        duration: 1000,
+        easing: 'easeOutCubic',
+        from: 0,
+        to: 2.5
+      },
+      pointRadius: {
+        duration: 600,
+        easing: 'easeOutBack',
+        from: 0,
+        to: 4
       }
+    },
+    hover: {
+      mode: 'nearest',
+      intersect: false
     },
     scales: {
       ...chartConfig.options.scales,
@@ -190,7 +210,7 @@ const totalFundsChart = new Chart(totalFundsCtx, {
         },
         ticks: {
           ...chartConfig.options.scales.y.ticks,
-          callback: function(value) {
+          callback: function (value) {
             return '$' + value.toLocaleString('en-US', {
               minimumFractionDigits: 0,
               maximumFractionDigits: 0
@@ -200,9 +220,10 @@ const totalFundsChart = new Chart(totalFundsCtx, {
       }
     }
   }
-});
+}); // ✅ make sure this closing brace and parenthesis exist
 
-// Profit Yield Chart
+
+// Profit Yield Chart (animated left-to-right draw)
 const profitYieldCtx = document.getElementById('profitYieldCanvas').getContext('2d');
 const profitYieldChart = new Chart(profitYieldCtx, {
   ...chartConfig,
@@ -228,18 +249,63 @@ const profitYieldChart = new Chart(profitYieldCtx, {
   },
   options: {
     ...chartConfig.options,
+
+    // === Main animation: line draws left-to-right ===
+    animation: {
+      duration: 2000,
+      easing: 'easeInOutQuart'
+    },
+
+    // // Progressive point reveal along the x-axis
+    // animations: {
+    //   x: {
+    //     type: 'number',
+    //     easing: 'easeInOutQuad',
+    //     duration: 2000,
+    //     from: NaN,
+    //     // delay(ctx) {
+    //     //   // stagger drawing points
+    //     //   return ctx.index * 50;
+    //     // }
+    //   },
+    //   y: {
+    //     type: 'number',
+    //     easing: 'easeInOutQuad',
+    //     duration: 2000,
+    //     from: NaN,
+    //     // delay(ctx) {
+    //     //   return ctx.index * 50;
+    //     // }
+    //   },
+    //   pointRadius: {
+    //     duration: 400,
+    //     easing: 'easeOutBack',
+    //     from: 0,
+    //     to: 4,
+    //     // delay(ctx) {
+    //     //   return ctx.index * 50 + 500; // points appear slightly after the line segment
+    //     // }
+    //   }
+    // },
+
+    hover: {
+      mode: 'nearest',
+      intersect: false
+    },
+
     plugins: {
       ...chartConfig.options.plugins,
       tooltip: {
         ...chartConfig.options.plugins.tooltip,
         callbacks: {
           ...chartConfig.options.plugins.tooltip.callbacks,
-          label: function(context) {
+          label: function (context) {
             return 'Dividend Yield: ' + context.parsed.y.toFixed(2) + '%';
           }
         }
       }
     },
+
     scales: {
       ...chartConfig.options.scales,
       y: {
@@ -256,7 +322,7 @@ const profitYieldChart = new Chart(profitYieldCtx, {
         },
         ticks: {
           ...chartConfig.options.scales.y.ticks,
-          callback: function(value) {
+          callback: function (value) {
             return value.toFixed(1) + '%';
           }
         }
@@ -264,6 +330,7 @@ const profitYieldChart = new Chart(profitYieldCtx, {
     }
   }
 });
+
 
 // Tab Switching Functionality
 const tabs = document.querySelectorAll('.chart-tab');
@@ -297,3 +364,17 @@ tabs.forEach(tab => {
     }
   });
 });
+
+// === Chart fade-in on scroll ===
+const chartWrappers = document.querySelectorAll('.chart-wrapper');
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+chartWrappers.forEach(wrapper => observer.observe(wrapper));
