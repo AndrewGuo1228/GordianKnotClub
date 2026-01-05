@@ -1,6 +1,7 @@
 <!doctype html>
         <html lang="en">
           <head>
+            <canvas id="backgroundCanvas"></canvas>
             <meta charset="utf-8">
             <link rel="stylesheet" href="./css/style.css">
           </head>
@@ -9,63 +10,84 @@
               <div class="container-width" id="iq7f">
                 <div class="header-nav">
                   <a href="index.html" class="logo-link">
-                    <div class="logo">GKCC</div>
+                    <div class="logo fade-in">GKC</div>
                   </a>
                   <nav class="menu" id="icuu">
                     <a href="Team.html" class="menu-item-link">
-                      <div class="menu-item">Team</div>
+                      <div class="menu-item fade-in">Team</div>
                     </a>
                     <a href="Performance.html" class="menu-item-link">
-                      <div class="menu-item">Performance</div>
+                      <div class="menu-item fade-in">Performance</div>
                     </a>
                     <a href="strategy.html" class="menu-item-link">
-                      <div class="menu-item">Strategies</div>
+                      <div class="menu-item fade-in">Investment Philosophy</div>
                     </a>
-                    <a href="posts.html" class="menu-item-link">
+                    <!-- <a href="posts.html" class="menu-item-link">
                       <div class="menu-item">Posts</div>
-                    </a>
+                    </a> -->
                   </nav>
                 </div>
-                <div class="lead-title" id="i3nxp">Our investment strategies/logistics
+                <div class="lead-title fade-in" id="i3nxp">Our investment Philosophy
                 </div>
-                <div class="sub-lead-title" id="ieg23">Be friends with time, Embrace the ambugious right.
+                <div class="sub-lead-title fade-in" id="ieg23">Be friends with time, Embrace the ambugious right.
                 </div>
               </div>
             </header>
             <section class="flex-sect" id="i4wxnh">
-              <div class="container-width" id="icrx1l">
-                <div class="flex-title" id="iill0k">Our Investment Strategies
-                </div>
-                <div class="flex-desc" id="ikumb3"> 
-                    Our investment strategies are divided into two distinct branches, each meticulously designed to cater to different investor needs and risk appetites. Both strategy will be complemented with risk management and quantitative analysis.
-                </div>
-                <div class="cards" id="ih4ozp">
-                  <div class="card2" id="iwsyhf">
-                    <div class="card-body" id="i9x48f">
-                      <div class="card-title" id="iq1xeg">Long-Term Growth
-                      </div>
-                      <div class="card-sub-title" id="inr74m">Stock Pitch, Multistage Gordon Growth Model, Fundamental analysis, Asset Allocation, Risk, Quant Analysis
-                      </div>
-                      <div class="card-desc" id="iblbt3">In February 2022, we embarked on an ambitious journey with a modest $6,000, driven by the vision to craft a robust investment strategy tailored to our clients—primarily UCSD students. Over 19 months of diligent experimentation, we developed a dynamic approach that not only met but exceeded our initial expectations.
-                            
-                        This division focuses on achieving steady, long-term returns through a well-constructed portfolio based on asset allocation theory, exploring correlations, options strategies, and quantitative analysis. Our investment strategy aims to maintain a low correlation with the broader market while steadily accruing value through option premiums, dividends, and long-term capital appreciation. Our current portfolio is a combination of diverse asset types, including equities, bonds, REITs, commodities like oil, gold, and natural gas, cryptocurrencies, and country-level macro investments (such as China and Japan). This multifaceted approach is further enhanced by specific options strategies designed for each asset symbol, ensuring a resilient portfolio that delivers consistent returns over time.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card2">
-                    <div class="card-body" id="iplxb7">
-                      <div class="card-title" id="ipakt8">Alternative Investments
-                      </div>
-                      <div class="card-sub-title">Option, Cryptocurrencies, Financial report release, Risk, Qunat Analysis
-                      </div>
-                      <div class="card-desc">This division targets high-risk, high-reward opportunities in alternative investments such as cryptocurrencies and short-term market moves. This branch requires swift decision-making and tactical use of options and leverage to capitalize on promising stocks, especially around key events like financial report releases. By pursuing these aggressive strategies, we aim to hedge the main portfolio and explore diverse possibilities for more significant gains. We open the door to new investments at the start of each month, continually expanding our reach.
-                        As we look to the future, our commitment to learning and refining our strategies remains steadfast. We aim to incorporate more precise tactics and offer additional indicators that our investors value, ensuring that we continue to provide exceptional asset management services.                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="container-width" id="icrx1l">
+              <div class="flex-title fade-in" id="iill0k">
+                Our Investment Philosophy
               </div>
-            </section>
+
+              <div class="flex-desc fade-in" id="ikumb3">
+                Our investment approach is grounded in macroeconomic insights, disciplined risk management, and long-term diversification.
+                We construct portfolios that generate stable cash flows and endure across market cycles by combining complementary asset exposures and systematic frameworks.
+              </div>
+
+              <div class="cards" id="ih4ozp">
+
+                <!-- Qualitative Philosophy Card -->
+                <div class="card2" id="iwsyhf">
+                  <div class="card-body" id="i9x48f">
+                    <div class="card-title" id="iq1xeg">
+                      Qualitative Investment Philosophy
+                    </div>
+                    <div class="card-sub-title" id="inr74m">
+                      Macro Allocation · Long-Term Orientation · Diversification
+                    </div>
+                    <div class="card-desc" id="iblbt3">
+                      We prioritise a macro-driven asset allocation framework designed to navigate evolving economic regimes. 
+                      By combining assets with distinct sensitivities to global conditions — including equities, bonds, commodities, real assets and digital assets — we aim to reduce portfolio volatility and enhance resilience.
+                      <br><br>
+                      Our focus extends beyond price appreciation to encompass recurring income generation through strategic use of options and yield-oriented positions.
+                      This long-term, stability-first orientation is intended to deliver dependable performance across cycles rather than chase short-term market moves.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Quantitative Framework Card -->
+                <div class="card2">
+                  <div class="card-body" id="iplxb7">
+                    <div class="card-title" id="ipakt8">
+                      Quantitative Framework & Risk Management
+                    </div>
+                    <div class="card-sub-title">
+                      Beta Exposure · Correlation Control · Greeks & Portfolio Decomposition
+                    </div>
+                    <div class="card-desc">
+                      Our qualitative views are reinforced by a robust quantitative framework that continuously measures and manages risk. 
+                      We monitor exposures, correlations, and option sensitivities to calibrate portfolios in line with our stability objectives. 
+                      <br><br>
+                      Risk is defined as potential capital loss, not short-term volatility, and each allocation is evaluated through decomposition and systematic analysis. 
+                      This structured approach ensures disciplined positioning, controlled risk budgets, and evolving portfolio adaptations without overtrading.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+            
             <footer class="footer-under" id="iwkxe2">
               <div class="container-width">
                 <!-- Footer Brand -->
@@ -135,5 +157,6 @@
                 </div>
               </div>
             </footer>
+          <script src="script/montecarlo-background.js"></script>
           </body>
         </html>
